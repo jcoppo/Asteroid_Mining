@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253761EFB4CA000C21B8D /* AppDelegate.swift */; };
+		BC1253791EFB4CA000C21B8D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC1253781EFB4CA000C21B8D /* GameScene.sks */; };
+		BC12537B1EFB4CA000C21B8D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC12537A1EFB4CA000C21B8D /* Actions.sks */; };
+		BC12537D1EFB4CA000C21B8D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12537C1EFB4CA000C21B8D /* GameScene.swift */; };
+		BC12537F1EFB4CA000C21B8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12537E1EFB4CA000C21B8D /* GameViewController.swift */; };
+		BC1253821EFB4CA000C21B8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1253801EFB4CA000C21B8D /* Main.storyboard */; };
+		BC1253841EFB4CA000C21B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1253831EFB4CA000C21B8D /* Assets.xcassets */; };
+		BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1253851EFB4CA000C21B8D /* LaunchScreen.storyboard */; };
+		BC1253921EFB4CA000C21B8D /* Asteroid_MiningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253911EFB4CA000C21B8D /* Asteroid_MiningTests.swift */; };
+		BC12539D1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12539C1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC12538E1EFB4CA000C21B8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC12536B1EFB4CA000C21B8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1253721EFB4CA000C21B8D;
+			remoteInfo = "Asteroid Mining";
+		};
+		BC1253991EFB4CA000C21B8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC12536B1EFB4CA000C21B8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1253721EFB4CA000C21B8D;
+			remoteInfo = "Asteroid Mining";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Mining.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1253761EFB4CA000C21B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC1253781EFB4CA000C21B8D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BC12537A1EFB4CA000C21B8D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		BC12537C1EFB4CA000C21B8D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BC12537E1EFB4CA000C21B8D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BC1253811EFB4CA000C21B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC1253831EFB4CA000C21B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC1253861EFB4CA000C21B8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC1253881EFB4CA000C21B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC12538D1EFB4CA000C21B8D /* Asteroid MiningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asteroid MiningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1253911EFB4CA000C21B8D /* Asteroid_MiningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid_MiningTests.swift; sourceTree = "<group>"; };
+		BC1253931EFB4CA000C21B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1253981EFB4CA000C21B8D /* Asteroid MiningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asteroid MiningUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC12539C1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid_MiningUITests.swift; sourceTree = "<group>"; };
+		BC12539E1EFB4CA000C21B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC1253701EFB4CA000C21B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC12538A1EFB4CA000C21B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1253951EFB4CA000C21B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC12536A1EFB4CA000C21B8D = {
+			isa = PBXGroup;
+			children = (
+				BC1253751EFB4CA000C21B8D /* Asteroid Mining */,
+				BC1253901EFB4CA000C21B8D /* Asteroid MiningTests */,
+				BC12539B1EFB4CA000C21B8D /* Asteroid MiningUITests */,
+				BC1253741EFB4CA000C21B8D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC1253741EFB4CA000C21B8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */,
+				BC12538D1EFB4CA000C21B8D /* Asteroid MiningTests.xctest */,
+				BC1253981EFB4CA000C21B8D /* Asteroid MiningUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC1253751EFB4CA000C21B8D /* Asteroid Mining */ = {
+			isa = PBXGroup;
+			children = (
+				BC1253761EFB4CA000C21B8D /* AppDelegate.swift */,
+				BC1253781EFB4CA000C21B8D /* GameScene.sks */,
+				BC12537A1EFB4CA000C21B8D /* Actions.sks */,
+				BC12537C1EFB4CA000C21B8D /* GameScene.swift */,
+				BC12537E1EFB4CA000C21B8D /* GameViewController.swift */,
+				BC1253801EFB4CA000C21B8D /* Main.storyboard */,
+				BC1253831EFB4CA000C21B8D /* Assets.xcassets */,
+				BC1253851EFB4CA000C21B8D /* LaunchScreen.storyboard */,
+				BC1253881EFB4CA000C21B8D /* Info.plist */,
+			);
+			path = "Asteroid Mining";
+			sourceTree = "<group>";
+		};
+		BC1253901EFB4CA000C21B8D /* Asteroid MiningTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1253911EFB4CA000C21B8D /* Asteroid_MiningTests.swift */,
+				BC1253931EFB4CA000C21B8D /* Info.plist */,
+			);
+			path = "Asteroid MiningTests";
+			sourceTree = "<group>";
+		};
+		BC12539B1EFB4CA000C21B8D /* Asteroid MiningUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC12539C1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift */,
+				BC12539E1EFB4CA000C21B8D /* Info.plist */,
+			);
+			path = "Asteroid MiningUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC1253721EFB4CA000C21B8D /* Asteroid Mining */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1253A11EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid Mining" */;
+			buildPhases = (
+				BC12536F1EFB4CA000C21B8D /* Sources */,
+				BC1253701EFB4CA000C21B8D /* Frameworks */,
+				BC1253711EFB4CA000C21B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Asteroid Mining";
+			productName = "Asteroid Mining";
+			productReference = BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC12538C1EFB4CA000C21B8D /* Asteroid MiningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1253A41EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningTests" */;
+			buildPhases = (
+				BC1253891EFB4CA000C21B8D /* Sources */,
+				BC12538A1EFB4CA000C21B8D /* Frameworks */,
+				BC12538B1EFB4CA000C21B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC12538F1EFB4CA000C21B8D /* PBXTargetDependency */,
+			);
+			name = "Asteroid MiningTests";
+			productName = "Asteroid MiningTests";
+			productReference = BC12538D1EFB4CA000C21B8D /* Asteroid MiningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC1253971EFB4CA000C21B8D /* Asteroid MiningUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1253A71EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningUITests" */;
+			buildPhases = (
+				BC1253941EFB4CA000C21B8D /* Sources */,
+				BC1253951EFB4CA000C21B8D /* Frameworks */,
+				BC1253961EFB4CA000C21B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC12539A1EFB4CA000C21B8D /* PBXTargetDependency */,
+			);
+			name = "Asteroid MiningUITests";
+			productName = "Asteroid MiningUITests";
+			productReference = BC1253981EFB4CA000C21B8D /* Asteroid MiningUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC12536B1EFB4CA000C21B8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jayson Coppo";
+				TargetAttributes = {
+					BC1253721EFB4CA000C21B8D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2A8STS47V2;
+						ProvisioningStyle = Automatic;
+					};
+					BC12538C1EFB4CA000C21B8D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2A8STS47V2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC1253721EFB4CA000C21B8D;
+					};
+					BC1253971EFB4CA000C21B8D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2A8STS47V2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BC1253721EFB4CA000C21B8D;
+					};
+				};
+			};
+			buildConfigurationList = BC12536E1EFB4CA000C21B8D /* Build configuration list for PBXProject "Asteroid Mining" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC12536A1EFB4CA000C21B8D;
+			productRefGroup = BC1253741EFB4CA000C21B8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC1253721EFB4CA000C21B8D /* Asteroid Mining */,
+				BC12538C1EFB4CA000C21B8D /* Asteroid MiningTests */,
+				BC1253971EFB4CA000C21B8D /* Asteroid MiningUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC1253711EFB4CA000C21B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1253821EFB4CA000C21B8D /* Main.storyboard in Resources */,
+				BC1253791EFB4CA000C21B8D /* GameScene.sks in Resources */,
+				BC1253841EFB4CA000C21B8D /* Assets.xcassets in Resources */,
+				BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */,
+				BC12537B1EFB4CA000C21B8D /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC12538B1EFB4CA000C21B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1253961EFB4CA000C21B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC12536F1EFB4CA000C21B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC12537D1EFB4CA000C21B8D /* GameScene.swift in Sources */,
+				BC12537F1EFB4CA000C21B8D /* GameViewController.swift in Sources */,
+				BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1253891EFB4CA000C21B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1253921EFB4CA000C21B8D /* Asteroid_MiningTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1253941EFB4CA000C21B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC12539D1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC12538F1EFB4CA000C21B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1253721EFB4CA000C21B8D /* Asteroid Mining */;
+			targetProxy = BC12538E1EFB4CA000C21B8D /* PBXContainerItemProxy */;
+		};
+		BC12539A1EFB4CA000C21B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1253721EFB4CA000C21B8D /* Asteroid Mining */;
+			targetProxy = BC1253991EFB4CA000C21B8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC1253801EFB4CA000C21B8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1253811EFB4CA000C21B8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC1253851EFB4CA000C21B8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1253861EFB4CA000C21B8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC12539F1EFB4CA000C21B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC1253A01EFB4CA000C21B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC1253A21EFB4CA000C21B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BC1253A31EFB4CA000C21B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BC1253A51EFB4CA000C21B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid MiningTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-MiningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Mining.app/Asteroid Mining";
+			};
+			name = Debug;
+		};
+		BC1253A61EFB4CA000C21B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid MiningTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-MiningTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Mining.app/Asteroid Mining";
+			};
+			name = Release;
+		};
+		BC1253A81EFB4CA000C21B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid MiningUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-MiningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Asteroid Mining";
+			};
+			name = Debug;
+		};
+		BC1253A91EFB4CA000C21B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2A8STS47V2;
+				INFOPLIST_FILE = "Asteroid MiningUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-MiningUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Asteroid Mining";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC12536E1EFB4CA000C21B8D /* Build configuration list for PBXProject "Asteroid Mining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC12539F1EFB4CA000C21B8D /* Debug */,
+				BC1253A01EFB4CA000C21B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC1253A11EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid Mining" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1253A21EFB4CA000C21B8D /* Debug */,
+				BC1253A31EFB4CA000C21B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC1253A41EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1253A51EFB4CA000C21B8D /* Debug */,
+				BC1253A61EFB4CA000C21B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC1253A71EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1253A81EFB4CA000C21B8D /* Debug */,
+				BC1253A91EFB4CA000C21B8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC12536B1EFB4CA000C21B8D /* Project object */;
+}
