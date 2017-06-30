@@ -40,26 +40,26 @@ class PlayerShip: SKNode {
     
     func dieExplosion() {
         
-        //particle explosion effect
-        for _ in 0..<20 {
-            let side = random(10, 30)
-            let particle = SKShapeNode(rectOf: CGSize(width: side, height: side))
-            particle.fillColor = randomColor()
-            particle.lineWidth = 0
-            particle.physicsBody = SKPhysicsBody()
-            particle.physicsBody?.velocity = CGVector(dx: random(-200, 200), dy: random(-200, 200))
-            particle.physicsBody?.fieldBitMask = GravMask.None
-            addChild(particle)
-            
-            let duration = TimeInterval(random(1, 1.5))
-            
-            particle.run(SKAction.sequence([
-                SKAction.wait(forDuration: duration),
-                SKAction.removeFromParent()
-                ]))
+        for n in 0..<elements.elementArray.count {
+            for _ in 0..<elements.elementArray[n].amount {
+                
+                let side = random(10, 30)
+                let particle = SKShapeNode(rectOf: CGSize(width: side, height: side))
+                particle.fillColor = elements.elementArray[n].color
+                particle.lineWidth = 0
+                particle.physicsBody = SKPhysicsBody()
+                particle.physicsBody?.velocity = CGVector(dx: random(-200, 200), dy: random(-200, 200))
+                particle.physicsBody?.fieldBitMask = GravMask.None
+                addChild(particle)
+                
+                let duration = TimeInterval(random(1, 1.5))
+                
+                particle.run(SKAction.sequence([
+                    SKAction.wait(forDuration: duration),
+                    SKAction.removeFromParent()
+                    ]))
+            }
         }
-
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

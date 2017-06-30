@@ -147,6 +147,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
             let label = SKLabelNode(fontNamed: "Arial")
             label.position = CGPoint(x: 0, y: CGFloat(i)*40)
             label.text = "\(element.amount) \(element.name)"
+            label.fontColor = element.color
             labelParentNode.addChild(label)
         }
         
@@ -158,13 +159,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         
         //particle effect
         minedParticles = [SKNode]()
-        for _ in 0..<20 {
+        for element in asteroid.elements {
             let side = random(10, 30)
             let particle = SKShapeNode(rectOf: CGSize(width: side, height: side))
             let x = asteroid.position.x + random(-asteroid.radius, asteroid.radius)
             let y = asteroid.position.y + random(-asteroid.radius, asteroid.radius)
             particle.position = CGPoint(x: x, y: y)
-            particle.fillColor = asteroid.shape.fillColor
+            particle.fillColor = element.color
             particle.lineWidth = 0
             addChild(particle)
             minedParticles.append(particle)
@@ -211,7 +212,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
     }
     
     func dropOffYourStuff() {
-        print("drop off")
         //transfer ship's element amounts to mothership's, show labels of total gains, then empty the ship's
         
         labelParentNode.removeAllChildren()
@@ -275,6 +275,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                             label.horizontalAlignmentMode = .left
                             label.text = "\(elementsGained.elements.elementArray[i].amount) \(elementsGained.elements.elementArray[i].name)"
                             labelParentNode.addChild(label)
+                            label.fontColor = elementsGained.elements.elementArray[i].color
                             numberOfLabels += 1
 
                         }

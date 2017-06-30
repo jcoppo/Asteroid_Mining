@@ -14,6 +14,7 @@ struct Element {
     var symbol = String()
     //the rarity number is used to determine how often it appears in asteroids
     var rarity = CGFloat()
+    var color = UIColor()
     //for determining if used
     var minNum = CGFloat()
     var maxNum = CGFloat()
@@ -24,6 +25,7 @@ struct Element {
         self.name = name
         self.symbol = symbol
         self.rarity = rarity
+        self.color = color
     }
     init() {}
 }
