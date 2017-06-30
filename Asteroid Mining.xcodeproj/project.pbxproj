@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0D3E551F048D6600F839C0 /* ElementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0D3E541F048D6600F839C0 /* ElementData.swift */; };
+		BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BC0D3E561F048ED100F839C0 /* Ideas.rtf */; };
 		BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253761EFB4CA000C21B8D /* AppDelegate.swift */; };
-		BC1253791EFB4CA000C21B8D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC1253781EFB4CA000C21B8D /* GameScene.sks */; };
 		BC12537B1EFB4CA000C21B8D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BC12537A1EFB4CA000C21B8D /* Actions.sks */; };
 		BC12537D1EFB4CA000C21B8D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12537C1EFB4CA000C21B8D /* GameScene.swift */; };
 		BC12537F1EFB4CA000C21B8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12537E1EFB4CA000C21B8D /* GameViewController.swift */; };
@@ -17,6 +18,19 @@
 		BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1253851EFB4CA000C21B8D /* LaunchScreen.storyboard */; };
 		BC1253921EFB4CA000C21B8D /* Asteroid_MiningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253911EFB4CA000C21B8D /* Asteroid_MiningTests.swift */; };
 		BC12539D1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC12539C1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift */; };
+		BC1253AB1EFB4D5100C21B8D /* PlayerShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253AA1EFB4D5100C21B8D /* PlayerShip.swift */; };
+		BC1253AD1EFB56D500C21B8D /* AsteroidParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253AC1EFB56D500C21B8D /* AsteroidParent.swift */; };
+		BC3DCAA91F01C2D800780BBA /* PlayRoomScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3DCAA81F01C2D800780BBA /* PlayRoomScene.swift */; };
+		BC3DCAAB1F01EA7B00780BBA /* ExitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3DCAAA1F01EA7B00780BBA /* ExitButton.swift */; };
+		BC6C52BD1F057F41002A7B8C /* AsteroidBirthingStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6C52BC1F057F41002A7B8C /* AsteroidBirthingStar.swift */; };
+		BC8319BF1F0263D2007C8C09 /* PlayerMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8319BE1F0263D2007C8C09 /* PlayerMan.swift */; };
+		BC8319C11F026A92007C8C09 /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8319C01F026A92007C8C09 /* Wall.swift */; };
+		BC8319C31F0320AC007C8C09 /* ShopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8319C21F0320AC007C8C09 /* ShopButton.swift */; };
+		BCF39F7B1EFBA61B00A5CEB6 /* OverWorldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF39F7A1EFBA61B00A5CEB6 /* OverWorldScene.swift */; };
+		BCF39F7D1EFBBC1900A5CEB6 /* AreaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF39F7C1EFBBC1900A5CEB6 /* AreaNode.swift */; };
+		BCF39F811EFC205400A5CEB6 /* BackgroundStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF39F801EFC205400A5CEB6 /* BackgroundStars.swift */; };
+		BCF39F851EFC241B00A5CEB6 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF39F841EFC241B00A5CEB6 /* Global.swift */; };
+		BCF39F871EFE43D000A5CEB6 /* MotherShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF39F861EFE43D000A5CEB6 /* MotherShip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC0D3E541F048D6600F839C0 /* ElementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementData.swift; sourceTree = "<group>"; };
+		BC0D3E561F048ED100F839C0 /* Ideas.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Ideas.rtf; sourceTree = "<group>"; };
 		BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Mining.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1253761EFB4CA000C21B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC1253781EFB4CA000C21B8D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		BC12537A1EFB4CA000C21B8D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		BC12537C1EFB4CA000C21B8D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		BC12537E1EFB4CA000C21B8D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +68,19 @@
 		BC1253981EFB4CA000C21B8D /* Asteroid MiningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asteroid MiningUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC12539C1EFB4CA000C21B8D /* Asteroid_MiningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid_MiningUITests.swift; sourceTree = "<group>"; };
 		BC12539E1EFB4CA000C21B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1253AA1EFB4D5100C21B8D /* PlayerShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerShip.swift; sourceTree = "<group>"; };
+		BC1253AC1EFB56D500C21B8D /* AsteroidParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidParent.swift; sourceTree = "<group>"; };
+		BC3DCAA81F01C2D800780BBA /* PlayRoomScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayRoomScene.swift; sourceTree = "<group>"; };
+		BC3DCAAA1F01EA7B00780BBA /* ExitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitButton.swift; sourceTree = "<group>"; };
+		BC6C52BC1F057F41002A7B8C /* AsteroidBirthingStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidBirthingStar.swift; sourceTree = "<group>"; };
+		BC8319BE1F0263D2007C8C09 /* PlayerMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerMan.swift; sourceTree = "<group>"; };
+		BC8319C01F026A92007C8C09 /* Wall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
+		BC8319C21F0320AC007C8C09 /* ShopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopButton.swift; sourceTree = "<group>"; };
+		BCF39F7A1EFBA61B00A5CEB6 /* OverWorldScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverWorldScene.swift; sourceTree = "<group>"; };
+		BCF39F7C1EFBBC1900A5CEB6 /* AreaNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaNode.swift; sourceTree = "<group>"; };
+		BCF39F801EFC205400A5CEB6 /* BackgroundStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundStars.swift; sourceTree = "<group>"; };
+		BCF39F841EFC241B00A5CEB6 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		BCF39F861EFE43D000A5CEB6 /* MotherShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotherShip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +132,16 @@
 			isa = PBXGroup;
 			children = (
 				BC1253761EFB4CA000C21B8D /* AppDelegate.swift */,
-				BC1253781EFB4CA000C21B8D /* GameScene.sks */,
-				BC12537A1EFB4CA000C21B8D /* Actions.sks */,
-				BC12537C1EFB4CA000C21B8D /* GameScene.swift */,
 				BC12537E1EFB4CA000C21B8D /* GameViewController.swift */,
+				BCF39F841EFC241B00A5CEB6 /* Global.swift */,
+				BC0D3E541F048D6600F839C0 /* ElementData.swift */,
+				BCF39F821EFC208E00A5CEB6 /* Overworld */,
+				BCF39F831EFC209E00A5CEB6 /* GameScene */,
+				BC3DCAA71F01C2AB00780BBA /* PlayRoom */,
+				BC3DCAAA1F01EA7B00780BBA /* ExitButton.swift */,
+				BCF39F801EFC205400A5CEB6 /* BackgroundStars.swift */,
+				BC12537A1EFB4CA000C21B8D /* Actions.sks */,
+				BC0D3E561F048ED100F839C0 /* Ideas.rtf */,
 				BC1253801EFB4CA000C21B8D /* Main.storyboard */,
 				BC1253831EFB4CA000C21B8D /* Assets.xcassets */,
 				BC1253851EFB4CA000C21B8D /* LaunchScreen.storyboard */,
@@ -132,6 +166,38 @@
 				BC12539E1EFB4CA000C21B8D /* Info.plist */,
 			);
 			path = "Asteroid MiningUITests";
+			sourceTree = "<group>";
+		};
+		BC3DCAA71F01C2AB00780BBA /* PlayRoom */ = {
+			isa = PBXGroup;
+			children = (
+				BC3DCAA81F01C2D800780BBA /* PlayRoomScene.swift */,
+				BC8319BE1F0263D2007C8C09 /* PlayerMan.swift */,
+				BC8319C01F026A92007C8C09 /* Wall.swift */,
+				BC8319C21F0320AC007C8C09 /* ShopButton.swift */,
+			);
+			name = PlayRoom;
+			sourceTree = "<group>";
+		};
+		BCF39F821EFC208E00A5CEB6 /* Overworld */ = {
+			isa = PBXGroup;
+			children = (
+				BCF39F7A1EFBA61B00A5CEB6 /* OverWorldScene.swift */,
+				BCF39F7C1EFBBC1900A5CEB6 /* AreaNode.swift */,
+			);
+			name = Overworld;
+			sourceTree = "<group>";
+		};
+		BCF39F831EFC209E00A5CEB6 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				BC12537C1EFB4CA000C21B8D /* GameScene.swift */,
+				BC1253AA1EFB4D5100C21B8D /* PlayerShip.swift */,
+				BC1253AC1EFB56D500C21B8D /* AsteroidParent.swift */,
+				BC6C52BC1F057F41002A7B8C /* AsteroidBirthingStar.swift */,
+				BCF39F861EFE43D000A5CEB6 /* MotherShip.swift */,
+			);
+			name = GameScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */,
 				BC1253821EFB4CA000C21B8D /* Main.storyboard in Resources */,
-				BC1253791EFB4CA000C21B8D /* GameScene.sks in Resources */,
 				BC1253841EFB4CA000C21B8D /* Assets.xcassets in Resources */,
 				BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */,
 				BC12537B1EFB4CA000C21B8D /* Actions.sks in Resources */,
@@ -273,9 +339,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC0D3E551F048D6600F839C0 /* ElementData.swift in Sources */,
+				BC6C52BD1F057F41002A7B8C /* AsteroidBirthingStar.swift in Sources */,
+				BCF39F7D1EFBBC1900A5CEB6 /* AreaNode.swift in Sources */,
+				BC3DCAAB1F01EA7B00780BBA /* ExitButton.swift in Sources */,
+				BC1253AB1EFB4D5100C21B8D /* PlayerShip.swift in Sources */,
+				BC8319BF1F0263D2007C8C09 /* PlayerMan.swift in Sources */,
 				BC12537D1EFB4CA000C21B8D /* GameScene.swift in Sources */,
 				BC12537F1EFB4CA000C21B8D /* GameViewController.swift in Sources */,
+				BC3DCAA91F01C2D800780BBA /* PlayRoomScene.swift in Sources */,
+				BCF39F7B1EFBA61B00A5CEB6 /* OverWorldScene.swift in Sources */,
+				BC8319C31F0320AC007C8C09 /* ShopButton.swift in Sources */,
+				BCF39F811EFC205400A5CEB6 /* BackgroundStars.swift in Sources */,
+				BCF39F871EFE43D000A5CEB6 /* MotherShip.swift in Sources */,
+				BC8319C11F026A92007C8C09 /* Wall.swift in Sources */,
 				BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */,
+				BCF39F851EFC241B00A5CEB6 /* Global.swift in Sources */,
+				BC1253AD1EFB56D500C21B8D /* AsteroidParent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +608,7 @@
 				BC1253A31EFB4CA000C21B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC1253A41EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningTests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +617,7 @@
 				BC1253A61EFB4CA000C21B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC1253A71EFB4CA000C21B8D /* Build configuration list for PBXNativeTarget "Asteroid MiningUITests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +626,7 @@
 				BC1253A91EFB4CA000C21B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
