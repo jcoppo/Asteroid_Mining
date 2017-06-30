@@ -31,7 +31,7 @@ class OverWorldScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        print("is there a conflict?")
+        print("is there a conflict? No?")
         
         backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
