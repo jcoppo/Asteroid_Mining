@@ -377,10 +377,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                 
                 touchEnd = location
                 
-                let direction = pointDirection(point1: touchEnd, point2: touchStart)
+                let length = pointDistance(point1: touchEnd, point2: touchStart)
+                playerShip.changeSizeOfCueLine(height: length)
+                print(length)
                 
+                let direction = pointDirection(point1: touchEnd, point2: touchStart)
+                if length > 10{
                 playerShip.zRotation = direction - CGFloat.pi/2
                 playerShip.physicsBody?.angularVelocity = 0
+            }
             }
 
         }
