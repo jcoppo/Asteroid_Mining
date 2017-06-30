@@ -342,6 +342,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
             }
             
             touchStart = location
+            playerShip.addCueLine()
             
 //            //send player in direction of touchPoint
 //            let direction = pointDirection(point1: playerShip.position, point2: location)
@@ -387,6 +388,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        playerShip.removeCueLine()
         
         for t in touches {
             let location = t.location(in: self)

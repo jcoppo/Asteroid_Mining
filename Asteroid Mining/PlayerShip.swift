@@ -19,6 +19,8 @@ class PlayerShip: SKNode {
     
     var elements = Elements()
     
+    var dottedLine = SKEmitterNode()
+    
     override init() {
         super.init()
         
@@ -35,9 +37,7 @@ class PlayerShip: SKNode {
         physicsBody?.collisionBitMask = BitMask.Asteroid
         physicsBody?.contactTestBitMask = BitMask.Asteroid | BitMask.MotherShip
         physicsBody?.fieldBitMask = GravMask.None
-        
-        addLine()
-        
+                
     }
     
     func dieExplosion() {
@@ -64,17 +64,34 @@ class PlayerShip: SKNode {
         
     }
     
+    func addCueLine(){
+        let path = Bundle.main.path(forResource: "dottedLine", ofType: "sks")
+        dottedLine = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+        
+        dottedLine.position.x = position.x
+        dottedLine.position.y = position.y-sprite.size.height/2
+        dottedLine.name = "dottedLine"
+        dottedLine.targetNode = self.scene
+        
+        self.addChild(dottedLine)
+
+    }
+    
+    func removeCueLine(){
+        dottedLine.removeFromParent()
+    }
+    
     func addThrusterParticle(){
         
-        let path = Bundle.main.path(forResource: "theRain", ofType: "sks")
-        let rainParticle = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+        let path = Bundle.main.path(forResource: "flame", ofType: "sks")
+        let thruster = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
         
-        rainParticle.position.x = position.x
-        rainParticle.position.y = position.y-sprite.size.height/2
-        rainParticle.name = "rainParticle"
-        rainParticle.targetNode = self.scene
+        thruster.position.x = position.x
+        thruster.position.y = position.y-sprite.size.height/2
+        thruster.name = "flame"
+        thruster.targetNode = self.scene
         
-        self.addChild(rainParticle)
+        self.addChild(thruster)
     }
     
     func addLine(){
