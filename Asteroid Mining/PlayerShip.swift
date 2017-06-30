@@ -20,6 +20,7 @@ class PlayerShip: SKNode {
     var elements = Elements()
     
     var cueLine = SKShapeNode()
+    var thruster = SKEmitterNode()
     
     override init() {
         super.init()
@@ -108,15 +109,14 @@ class PlayerShip: SKNode {
     func addThrusterParticle(){
         
         let path = Bundle.main.path(forResource: "flame", ofType: "sks")
-        let thruster = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
-        
-        thruster.position.x = position.x
-        thruster.position.y = position.y-sprite.size.height/2
+        thruster = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
         thruster.name = "flame"
         thruster.targetNode = self.scene
-        
         self.addChild(thruster)
+        
+        
     }
+    
     
     func addLine(){
         let line = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 1, height: 100))

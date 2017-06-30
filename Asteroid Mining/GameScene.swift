@@ -366,20 +366,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
             
             if gameMode == .InPlay {
                 
-//                let dx = location.x - previous.x
-//                let dy = location.y - previous.y
-//                
-//                xSpeed = flickSpeed*dx
-//                ySpeed = flickSpeed*dy
-            
-                
-//                playerShip.physicsBody?.velocity = CGVector(dx: xSpeed, dy: ySpeed)
-                
                 touchEnd = location
                 
                 let length = pointDistance(point1: touchEnd, point2: touchStart)
                 playerShip.changeSizeOfCueLine(height: length)
-                print(length)
                 
                 let direction = pointDirection(point1: touchEnd, point2: touchStart)
                 if length > 10{
@@ -395,6 +385,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         playerShip.removeCueLine()
+        playerShip.addThrusterParticle()
         
         for t in touches {
             let location = t.location(in: self)
