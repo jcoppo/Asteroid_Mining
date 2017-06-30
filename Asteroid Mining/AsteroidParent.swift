@@ -12,6 +12,7 @@ class Asteroid: SKNode {
     
     var shape = SKShapeNode()
     var radius = CGFloat()
+    var width = CGFloat()
     var type = AsteroidType.Mine
     var area = String()
     var isHittable = true
@@ -45,8 +46,6 @@ class Asteroid: SKNode {
         }
         
         hp = numberOfElements
-        radius = 50+20*CGFloat(numberOfElements)
-
         
         physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = false
@@ -101,25 +100,12 @@ class Asteroid: SKNode {
                 delegate?.asteroidMined(asteroid: self)
             }
             
-            //make random line across circle
-            let angle1 = random(0, 2*CGFloat.pi)
-            let x1 = radius*cos(angle1)
-            let y1 = radius*sin(angle1)
-
-            let angle2 = angle1 + CGFloat.pi
-            let x2 = radius*cos(angle2)
-            let y2 = radius*sin(angle2)
+            //add line crack
             
-            let point1 = CGPoint(x: x1, y: y1)
-            let point2 = CGPoint(x: x2, y: y2)
-            
-            let path = CGMutablePath()
-            path.move(to: point1)
-            path.addLine(to: point2)
-            
-            let line = SKShapeNode(path: path)
-            line.strokeColor = UIColor.black
-            line.lineWidth = 4
+            let line = SKShapeNode(rectOf: CGSize(width: width*random(0.5, 0.9), height: 4))
+            line.fillColor = UIColor(white: 0.3, alpha: 1.0)
+            line.lineWidth = 0
+            line.zRotation = random(0, CGFloat.pi*2)
             shape.addChild(line)
         }
     }

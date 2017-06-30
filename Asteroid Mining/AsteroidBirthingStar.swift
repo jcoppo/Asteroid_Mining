@@ -9,26 +9,60 @@
 import SpriteKit
 
 class AsteroidBirthingStar: Asteroid {
-    
+        
     override init(areaElements: [Element]) {
         super.init(areaElements: areaElements)
         
+        
         switch type {
         case .Mine:
-            shape = SKShapeNode(circleOfRadius: radius)
-            physicsBody = SKPhysicsBody(circleOfRadius: radius)
+            
+            width = random(200, 300)
+            let numPoints = 4 + Int(arc4random_uniform(3))
+            
+            let points = makePointsInCircle(centerPoint: CGPoint(x: 0, y: 0), radius: width/2, numberOfPoints: numPoints)
+            
+            let path = CGMutablePath()
+            path.move(to: CGPoint(x: points[0].x, y: points[0].y))
+            
+            for i in 1..<points.count {
+                
+                path.addLine(to: CGPoint(x: points[i].x, y: points[i].y))
+            }
+            
+            shape = SKShapeNode(path: path)
             shape.fillColor = randomColor()
             shape.lineWidth = 0
             
+            physicsBody = SKPhysicsBody(polygonFrom: path)
+
+            
         case .Death:
-            let w = random(100, 600)
-            let h = random(100, 600)
-            shape = SKShapeNode(rectOf: CGSize(width: w, height: h))
+            
+            width = random(100, 600)
+            let numPoints = 3 + Int(arc4random_uniform(4))
+
+            let points = makePointsInCircle(centerPoint: CGPoint(x: 0, y: 0), radius: width/2, numberOfPoints: numPoints)
+
+            let offsetRange: CGFloat = 100
+            
+            let path = CGMutablePath()
+            path.move(to: CGPoint(x: points[0].x + random(-offsetRange, offsetRange), y: points[0].y + random(-offsetRange, offsetRange)))
+            
+            for i in 1..<points.count {
+                
+                 path.addLine(to: CGPoint(x: points[i].x + random(-offsetRange, offsetRange), y: points[i].y + random(-offsetRange, offsetRange)))
+            }
+            
+            shape = SKShapeNode(path: path)
             shape.fillColor = UIColor(white: 0.4, alpha: 1.0)
-            shape.lineWidth = 2
             shape.strokeColor = UIColor(white: 0.2, alpha: 1.0)
-            physicsBody = SKPhysicsBody(rectangleOf: shape.frame.size)
+            shape.lineWidth = 2
+
+            physicsBody = SKPhysicsBody(polygonFrom: path)
             physicsBody?.angularVelocity = random(-1, 1)
+            
+        
         }
         
         addChild(shape)

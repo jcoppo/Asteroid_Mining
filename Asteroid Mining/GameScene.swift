@@ -360,7 +360,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         for t in touches {
             
             let location = t.location(in: self)
-            let previous = t.previousLocation(in: self)
+//            let previous = t.previousLocation(in: self)
             
             //flick player around with a speed limit
             

@@ -103,4 +103,14 @@ func pointDirection(point1: CGPoint, point2: CGPoint) -> CGFloat {
     return atan2(dy, dx)
 }
 
-
+func makePointsInCircle(centerPoint: CGPoint, radius: CGFloat, numberOfPoints: Int) -> [CGPoint] {
+    var points = [CGPoint]()
+    for i in 0..<numberOfPoints {
+        let angle = 2*CGFloat.pi/CGFloat(numberOfPoints) * CGFloat(i)
+        let pos_x = centerPoint.x + radius*cos(angle)
+        let pos_y = centerPoint.y + radius*sin(angle)
+        let point = CGPoint(x: pos_x, y: pos_y)
+        points.append(point)
+    }
+    return points
+}
