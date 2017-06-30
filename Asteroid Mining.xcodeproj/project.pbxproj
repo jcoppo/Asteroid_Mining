@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862379481F06D330001E8276 /* theRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 862379471F06D330001E8276 /* theRain.sks */; };
 		BC0D3E551F048D6600F839C0 /* ElementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0D3E541F048D6600F839C0 /* ElementData.swift */; };
 		BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BC0D3E561F048ED100F839C0 /* Ideas.rtf */; };
 		BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253761EFB4CA000C21B8D /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862379471F06D330001E8276 /* theRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = theRain.sks; sourceTree = "<group>"; };
 		BC0D3E541F048D6600F839C0 /* ElementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementData.swift; sourceTree = "<group>"; };
 		BC0D3E561F048ED100F839C0 /* Ideas.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Ideas.rtf; sourceTree = "<group>"; };
 		BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Mining.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				BC1253AC1EFB56D500C21B8D /* AsteroidParent.swift */,
 				BC6C52BC1F057F41002A7B8C /* AsteroidBirthingStar.swift */,
 				BCF39F861EFE43D000A5CEB6 /* MotherShip.swift */,
+				862379471F06D330001E8276 /* theRain.sks */,
 			);
 			name = GameScene;
 			sourceTree = "<group>";
@@ -268,7 +271,7 @@
 				TargetAttributes = {
 					BC1253721EFB4CA000C21B8D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2A8STS47V2;
+						DevelopmentTeam = 3NSLQNHB3C;
 						ProvisioningStyle = Automatic;
 					};
 					BC12538C1EFB4CA000C21B8D = {
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */,
+				862379481F06D330001E8276 /* theRain.sks in Resources */,
 				BC1253821EFB4CA000C21B8D /* Main.storyboard in Resources */,
 				BC1253841EFB4CA000C21B8D /* Assets.xcassets in Resources */,
 				BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */,
@@ -509,7 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2A8STS47V2;
+				DEVELOPMENT_TEAM = 3NSLQNHB3C;
 				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";
@@ -522,7 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2A8STS47V2;
+				DEVELOPMENT_TEAM = 3NSLQNHB3C;
 				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";

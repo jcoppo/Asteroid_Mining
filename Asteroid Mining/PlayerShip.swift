@@ -35,7 +35,9 @@ class PlayerShip: SKNode {
         physicsBody?.collisionBitMask = BitMask.Asteroid
         physicsBody?.contactTestBitMask = BitMask.Asteroid | BitMask.MotherShip
         physicsBody?.fieldBitMask = GravMask.None
-            
+        
+        addLine()
+        
     }
     
     func dieExplosion() {
@@ -59,6 +61,26 @@ class PlayerShip: SKNode {
                 ]))
         }
 
+        
+    }
+    
+    func addThrusterParticle(){
+        
+        let path = Bundle.main.path(forResource: "theRain", ofType: "sks")
+        let rainParticle = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
+        
+        rainParticle.position.x = position.x
+        rainParticle.position.y = position.y-sprite.size.height/2
+        rainParticle.name = "rainParticle"
+        rainParticle.targetNode = self.scene
+        
+        self.addChild(rainParticle)
+    }
+    
+    func addLine(){
+        let line = SKShapeNode(rect: CGRect(x: 0, y: 0, width: 1, height: 100))
+        line.fillColor = UIColor(colorLiteralRed: 1.0, green: 0, blue: 0, alpha: 1)
+        self.addChild(line)
         
     }
     
