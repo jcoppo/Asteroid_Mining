@@ -32,6 +32,7 @@ class OverWorldScene: SKScene {
     override func didMove(to view: SKView) {
         
         print("This is Nate's Print")
+        print("How is the weather up there?")
         
         backgroundColor = UIColor(white: 0.1, alpha: 1.0)
         
