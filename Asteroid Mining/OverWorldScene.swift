@@ -105,8 +105,6 @@ class OverWorldScene: SKScene {
             position: CGPoint(x: 200, y: 200),
             elements: [elements.H,
                        elements.Li,
-                       elements.Be,
-                       elements.B,
                        elements.C,
                        elements.N,
                        elements.O,
@@ -117,7 +115,6 @@ class OverWorldScene: SKScene {
                        elements.Ca,
                        elements.Fe,
                        elements.Ni,
-                       elements.Zn,
                        elements.As,
                        elements.Kr,
                        elements.Ag,
@@ -133,7 +130,6 @@ class OverWorldScene: SKScene {
             position: CGPoint(x: 200, y: -200),
             elements: [elements.H,
                        elements.Li,
-                       elements.Be,
                        ]
         )
         addChild(shatteredGlass)
@@ -144,7 +140,6 @@ class OverWorldScene: SKScene {
             position: CGPoint(x: -300, y: 0),
             elements: [elements.H,
                        elements.Li,
-                       elements.Be,
                        ]
         )
         addChild(rockyRoad)
@@ -155,7 +150,6 @@ class OverWorldScene: SKScene {
             position: CGPoint(x: -500, y: 200),
             elements: [elements.H,
                        elements.Li,
-                       elements.Be,
                        ]
         )
         addChild(sparklingSector)
