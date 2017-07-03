@@ -60,6 +60,7 @@ class Asteroid: SKNode {
         physicsBody?.contactTestBitMask = BitMask.Player | BitMask.MotherShip
         physicsBody?.fieldBitMask = GravMask.None
         
+        
     }
     
     func chooseElement() -> Element {

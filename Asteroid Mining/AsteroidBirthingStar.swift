@@ -13,6 +13,7 @@ class AsteroidBirthingStar: Asteroid {
     override init(areaElements: [Element]) {
         super.init(areaElements: areaElements)
         
+        //make average color out of element colors
         
         switch type {
         case .Mine:
@@ -31,11 +32,44 @@ class AsteroidBirthingStar: Asteroid {
             }
             
             shape = SKShapeNode(path: path)
-            shape.fillColor = randomColor()
+            shape.fillColor = UIColor.white
             shape.lineWidth = 0
             
             physicsBody = SKPhysicsBody(polygonFrom: path)
+            
+            var color1 = CIColor()
+            var color2 = CIColor()
+            
+            if elements.count == 1 {
+                
+                color1 = CIColor(color: elements[0].color)
+                color2 = CIColor.white()
 
+            } else {
+                
+            
+                color1 = CIColor(color: elements[0].color)
+                color2 = CIColor(color: elements[1].color)
+            }
+            
+            let gradTexture = gradientTexture(
+                size: CGSize(width: width, height: width),
+                color1: color1,
+                color2: color2,
+                direction: .Up)
+            
+            
+            let pictureToMask = SKSpriteNode(texture: gradTexture, size: gradTexture.size())
+            
+            
+            let cropNode = SKCropNode()
+            cropNode.maskNode = shape
+            cropNode.addChild(pictureToMask)
+            //            cropNode.position = CGPoint(x: frame.midX, y: frame.midY)
+            addChild(cropNode)
+            
+            physicsBody?.angularVelocity = random(-1, 1)
+            
             
         case .Death:
             
@@ -62,10 +96,10 @@ class AsteroidBirthingStar: Asteroid {
             physicsBody = SKPhysicsBody(polygonFrom: path)
             physicsBody?.angularVelocity = random(-1, 1)
             
-        
+            addChild(shape)
+
         }
         
-        addChild(shape)
         
         physicsBody?.isDynamic = true
         physicsBody?.affectedByGravity = false
@@ -79,6 +113,9 @@ class AsteroidBirthingStar: Asteroid {
         physicsBody?.collisionBitMask = BitMask.Player
         physicsBody?.contactTestBitMask = BitMask.Player | BitMask.MotherShip
         physicsBody?.fieldBitMask = GravMask.None
+        
+        
+        zRotation = random(0, 2*CGFloat.pi)
 
     }
 
@@ -86,3 +123,4 @@ class AsteroidBirthingStar: Asteroid {
         fatalError("init(coder:) has not been implemented")
     }
 }
+

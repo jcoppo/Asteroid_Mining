@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SpriteKit
+import CoreImage 
 
 struct ViewControllers {
     static var gameVC = GameViewController()
@@ -114,3 +116,46 @@ func makePointsInCircle(centerPoint: CGPoint, radius: CGFloat, numberOfPoints: I
     }
     return points
 }
+
+public enum GradientDirection {
+    case Up
+    case Left
+    case UpLeft
+    case UpRight
+}
+
+func gradientTexture(size: CGSize, color1: CIColor, color2: CIColor, direction: GradientDirection) -> SKTexture {
+    
+    let context = CIContext(options: nil)
+    let filter = CIFilter(name: "CILinearGradient")
+    var startVector: CIVector
+    var endVector: CIVector
+    
+    filter!.setDefaults()
+    
+    switch direction {
+    case .Up:
+        startVector = CIVector(x: size.width * 0.5, y: 0)
+        endVector = CIVector(x: size.width * 0.5, y: size.height)
+    case .Left:
+        startVector = CIVector(x: size.width, y: size.height * 0.5)
+        endVector = CIVector(x: 0, y: size.height * 0.5)
+    case .UpLeft:
+        startVector = CIVector(x: size.width, y: 0)
+        endVector = CIVector(x: 0, y: size.height)
+    case .UpRight:
+        startVector = CIVector(x: 0, y: 0)
+        endVector = CIVector(x: size.width, y: size.height)
+    }
+    
+    filter!.setValue(startVector, forKey: "inputPoint0")
+    filter!.setValue(endVector, forKey: "inputPoint1")
+    filter!.setValue(color1, forKey: "inputColor0")
+    filter!.setValue(color2, forKey: "inputColor1")
+    
+    let image = context.createCGImage(filter!.outputImage!, from: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+    
+    let texture = SKTexture(cgImage: image!)
+    return texture
+}
+

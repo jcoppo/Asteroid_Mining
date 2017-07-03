@@ -12,7 +12,7 @@ import UIKit
 struct Element {
     var name = String()
     var symbol = String()
-    //the rarity number is used to determine how often it appears in asteroids
+    //the rarity number is used to determine how often it appears in asteroids 
     var rarity = CGFloat()
     var color = UIColor()
     //for determining if used
