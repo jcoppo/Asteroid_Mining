@@ -21,6 +21,7 @@ class PlayerShip: SKNode {
     
     var cueLine = SKShapeNode()
     var thruster = SKEmitterNode()
+    var lengthOfBoost = CGFloat()
     
     override init() {
         super.init()
@@ -39,6 +40,8 @@ class PlayerShip: SKNode {
         physicsBody?.collisionBitMask = BitMask.Asteroid
         physicsBody?.contactTestBitMask = BitMask.Asteroid | BitMask.MotherShip
         physicsBody?.fieldBitMask = GravMask.None
+        
+        addThrusterParticle()
         
     }
     
@@ -95,8 +98,11 @@ class PlayerShip: SKNode {
         if height > 2{
             cueLine.removeFromParent()
             cueLine = SKShapeNode(rect: CGRect(x: 0, y: -height-sprite.size.height/2, width: 4, height: height), cornerRadius: 1)
-            cueLine.fillColor = UIColor(colorLiteralRed: 1.0, green: 0.9, blue: 0.9, alpha: 1)
+            cueLine.fillColor = UIColor(colorLiteralRed: 1.0, green: 0.9, blue: 0.9, alpha: 0.3)
+            cueLine.lineWidth = 0
             addChild(cueLine)
+            lengthOfBoost = height/1000
+            
         }
         
         
@@ -112,9 +118,19 @@ class PlayerShip: SKNode {
         thruster = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as! SKEmitterNode
         thruster.name = "flame"
         thruster.targetNode = self.scene
+        thruster.particleBirthRate = 0
         self.addChild(thruster)
         
         
+    }
+    
+    func boost(){
+        thruster.particleBirthRate = 1000
+        Timer.scheduledTimer(withTimeInterval: TimeInterval(lengthOfBoost), repeats: false, block: {_ in self.thrusterOff()})
+    }
+    
+    func thrusterOff(){
+        thruster.particleBirthRate = 0
     }
     
     

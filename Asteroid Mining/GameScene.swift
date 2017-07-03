@@ -341,7 +341,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                 }
             }
             
-            touchStart = location
+//            touchStart = location
+//            touchStart.x = location.x - playerShip.position.x
+//            touchStart.y = location.y - playerShip.position.y
+            touchStart = t.location(in: cameraNode)
+            
             playerShip.addCueLine()
             
 //            //send player in direction of touchPoint
@@ -360,13 +364,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         for t in touches {
             
             let location = t.location(in: self)
+            print(location)
             let previous = t.previousLocation(in: self)
             
             //flick player around with a speed limit
             
             if gameMode == .InPlay {
                 
-                touchEnd = location
+//                touchEnd = location
+//                touchEnd.x = location.x - playerShip.position.x
+//                touchEnd.y = location.y - playerShip.position.y
+                touchEnd = t.location(in: cameraNode)
                 
                 let length = pointDistance(point1: touchEnd, point2: touchStart)
                 playerShip.changeSizeOfCueLine(height: length)
@@ -385,12 +393,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         playerShip.removeCueLine()
-        playerShip.addThrusterParticle()
+        
+        if gameMode == .InPlay{
+            playerShip.boost()
+        }
         
         for t in touches {
             let location = t.location(in: self)
             
-            touchEnd = location
+//            touchEnd = location
             
             let dx = touchEnd.x - touchStart.x
             let dy = touchEnd.y - touchStart.y
