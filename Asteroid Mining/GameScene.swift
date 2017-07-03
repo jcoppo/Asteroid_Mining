@@ -377,7 +377,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                 touchEnd = t.location(in: cameraNode)
                 
                 let length = pointDistance(point1: touchEnd, point2: touchStart)
-                playerShip.changeSizeOfCueLine(height: length)
+                playerShip.changeSizeOfCueLine(height: length/2)
                 
                 let direction = pointDirection(point1: touchEnd, point2: touchStart)
                 if length > 10{

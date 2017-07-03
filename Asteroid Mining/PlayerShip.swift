@@ -21,6 +21,7 @@ class PlayerShip: SKNode {
     
     var cueLine = SKShapeNode()
     var thruster = SKEmitterNode()
+    var timeOfBoost = CGFloat()
     var lengthOfBoost = CGFloat()
     
     override init() {
@@ -101,6 +102,7 @@ class PlayerShip: SKNode {
             cueLine.fillColor = UIColor(colorLiteralRed: 1.0, green: 0.9, blue: 0.9, alpha: 0.3)
             cueLine.lineWidth = 0
             addChild(cueLine)
+            timeOfBoost = height/1000
             lengthOfBoost = height/1000
             
         }
@@ -126,7 +128,8 @@ class PlayerShip: SKNode {
     
     func boost(){
         thruster.particleBirthRate = 1000
-        Timer.scheduledTimer(withTimeInterval: TimeInterval(lengthOfBoost), repeats: false, block: {_ in self.thrusterOff()})
+        thruster.particleLifetime = lengthOfBoost
+        Timer.scheduledTimer(withTimeInterval: TimeInterval(timeOfBoost), repeats: false, block: {_ in self.thrusterOff()})
     }
     
     func thrusterOff(){
