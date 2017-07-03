@@ -22,8 +22,25 @@ class ExitButton: SKNode {
 //        circle.fillColor = UIColor.gray
         addChild(circle)
         
+        let theArrow = SKShapeNode(path: makePath(bounds: circle.frame))
+        theArrow.lineWidth = 5
+        circle.addChild(theArrow)
+        
         name = "exit"
         
+    }
+    
+    func makePath(bounds: CGRect) -> CGMutablePath{
+        
+        let minX = CGFloat(bounds.minX+circle.lineWidth), minY = bounds.minY+circle.lineWidth, w = bounds.width-circle.lineWidth, h = bounds.height-circle.lineWidth;
+        print(bounds)
+        let pathPath = CGMutablePath()
+        
+        pathPath.move(to: CGPoint(x:-15, y: -15))
+        pathPath.addLine(to: CGPoint(x:20, y: 0))
+        pathPath.addLine(to: CGPoint(x:-15, y: 20))
+        
+        return pathPath
     }
     
     required init?(coder aDecoder: NSCoder) {
