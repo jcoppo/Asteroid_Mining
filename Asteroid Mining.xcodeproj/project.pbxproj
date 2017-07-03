@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868838501F0ACF1600570266 /* flame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8688384F1F0ACF1600570266 /* flame.sks */; };
 		BC0D3E551F048D6600F839C0 /* ElementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0D3E541F048D6600F839C0 /* ElementData.swift */; };
 		BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BC0D3E561F048ED100F839C0 /* Ideas.rtf */; };
 		BC1253771EFB4CA000C21B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1253761EFB4CA000C21B8D /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8688384F1F0ACF1600570266 /* flame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flame.sks; sourceTree = "<group>"; };
 		BC0D3E541F048D6600F839C0 /* ElementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementData.swift; sourceTree = "<group>"; };
 		BC0D3E561F048ED100F839C0 /* Ideas.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Ideas.rtf; sourceTree = "<group>"; };
 		BC1253731EFB4CA000C21B8D /* Asteroid Mining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Mining.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				BC1253AC1EFB56D500C21B8D /* AsteroidParent.swift */,
 				BC6C52BC1F057F41002A7B8C /* AsteroidBirthingStar.swift */,
 				BCF39F861EFE43D000A5CEB6 /* MotherShip.swift */,
+				8688384F1F0ACF1600570266 /* flame.sks */,
 			);
 			name = GameScene;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BC0D3E571F048ED100F839C0 /* Ideas.rtf in Resources */,
 				BC1253821EFB4CA000C21B8D /* Main.storyboard in Resources */,
 				BC1253841EFB4CA000C21B8D /* Assets.xcassets in Resources */,
+				868838501F0ACF1600570266 /* flame.sks in Resources */,
 				BC1253871EFB4CA000C21B8D /* LaunchScreen.storyboard in Resources */,
 				BC12537B1EFB4CA000C21B8D /* Actions.sks in Resources */,
 			);

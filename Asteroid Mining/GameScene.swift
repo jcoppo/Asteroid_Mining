@@ -342,15 +342,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                 }
             }
             
-            touchStart = location
+            //            touchStart = location
+            //            touchStart.x = location.x - playerShip.position.x
+            //            touchStart.y = location.y - playerShip.position.y
+            touchStart = t.location(in: cameraNode)
             
-//            //send player in direction of touchPoint
-//            let direction = pointDirection(point1: playerShip.position, point2: location)
-//            
-//            let speed: CGFloat = 400
-//            playerShip.physicsBody?.velocity = CGVector(dx: speed*cos(direction), dy: speed*sin(direction))
-//            playerShip.zRotation = direction - CGFloat.pi/2
-//            playerShip.physicsBody?.angularVelocity = 0
+            playerShip.addCueLine()
+            
+            //            //send player in direction of touchPoint
+            //            let direction = pointDirection(point1: playerShip.position, point2: location)
+            //
+            //            let speed: CGFloat = 400
+            //            playerShip.physicsBody?.velocity = CGVector(dx: speed*cos(direction), dy: speed*sin(direction))
+            //            playerShip.zRotation = direction - CGFloat.pi/2
+            //            playerShip.physicsBody?.angularVelocity = 0
             
         }
     }
@@ -360,40 +365,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         for t in touches {
             
             let location = t.location(in: self)
-//            let previous = t.previousLocation(in: self)
+            print(location)
+            let previous = t.previousLocation(in: self)
             
             //flick player around with a speed limit
             
             if gameMode == .InPlay {
+
+                touchEnd = t.location(in: cameraNode)
                 
-//                let dx = location.x - previous.x
-//                let dy = location.y - previous.y
-//                
-//                xSpeed = flickSpeed*dx
-//                ySpeed = flickSpeed*dy
-            
-                
-//                playerShip.physicsBody?.velocity = CGVector(dx: xSpeed, dy: ySpeed)
-                
-                touchEnd = location
+                let length = pointDistance(point1: touchEnd, point2: touchStart)
+                playerShip.changeSizeOfCueLine(height: length/2)
                 
                 let direction = pointDirection(point1: touchEnd, point2: touchStart)
-                
-                playerShip.zRotation = direction - CGFloat.pi/2
-                playerShip.physicsBody?.angularVelocity = 0
+                if length > 10{
+                    playerShip.zRotation = direction - CGFloat.pi/2
+                    playerShip.physicsBody?.angularVelocity = 0
+                }
             }
-
+            
         }
-    
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        playerShip.removeCueLine()
+        
+        if gameMode == .InPlay{
+            playerShip.boost()
+        }
+        
         for t in touches {
             let location = t.location(in: self)
-            
-            touchEnd = location
-            
+
             let dx = touchEnd.x - touchStart.x
             let dy = touchEnd.y - touchStart.y
             
@@ -412,13 +417,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
             if ySpeed < -speedLimit {
                 ySpeed = -speedLimit
             }
-
+            
             playerShip.physicsBody?.velocity.dx += -xSpeed
             playerShip.physicsBody?.velocity.dy += -ySpeed
             
         }
         
     }
+
     
     func didBegin(_ contact: SKPhysicsContact) {
         
