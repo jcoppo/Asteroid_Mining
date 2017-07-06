@@ -117,6 +117,7 @@ class PlayerShip: SKNode {
     
     func thrusterOff(){
         thruster.particleBirthRate = 0
+        lengthOfBoost = 0
     }
     
     
