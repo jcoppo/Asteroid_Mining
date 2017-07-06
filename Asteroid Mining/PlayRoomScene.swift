@@ -17,7 +17,7 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
     let cameraNode = SKCameraNode()
     let player = PlayerMan()
     let exitButton = ExitButton()
-    let shopButton = ShopButton()
+//    let shopButton = ShopButton()
     let labelParentNode = SKNode()
     
     let roomWidth: CGFloat = 2000
@@ -68,12 +68,14 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
 //        exitButton.zPosition = 10
         cameraNode.addChild(exitButton)
 
-        shopButton.position = CGPoint(x: size.width/2-200, y: size.height/2-50)
+//        shopButton.position = CGPoint(x: size.width/2-200, y: size.height/2-50)
 //        exitButton.zPosition = 10
-        cameraNode.addChild(shopButton)
+//        cameraNode.addChild(shopButton)
         
         cameraNode.addChild(labelParentNode)
-
+        
+        ViewControllers.gameVC.addPlayroomButtons()
+        
     }
     
     func tileBackground() {
@@ -93,6 +95,8 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
     
     func exitToOverworld() {
         
+        ViewControllers.gameVC.removePlayroomButtons()
+        
         let newScene = OverWorldScene()
         newScene.size = size
         newScene.scaleMode = SKSceneScaleMode.aspectFill
@@ -105,7 +109,7 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
             
             gameMode = .Shopping
             ViewControllers.gameVC.showTable()
-            shopButton.playMode()
+//            shopButton.playMode()
             
             
             //show gained element list
@@ -143,7 +147,7 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
 
             gameMode = .InPlay
             ViewControllers.gameVC.removeTable()
-            shopButton.shopMode()
+//            shopButton.shopMode()
             
             labelParentNode.isHidden = true
 
@@ -162,9 +166,9 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
                 
-                if node.name == "shop" {
-                    shopButtonPressed()
-                }
+//                if node.name == "shop" {
+//                    shopButtonPressed()
+//                }
             }
         }
     }

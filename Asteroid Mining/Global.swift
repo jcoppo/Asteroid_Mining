@@ -124,6 +124,10 @@ public enum GradientDirection {
     case UpRight
 }
 
+struct Font {
+    static let arial = "Arial"
+}
+
 func gradientTexture(size: CGSize, color1: CIColor, color2: CIColor, direction: GradientDirection) -> SKTexture {
     
     let context = CIContext(options: nil)

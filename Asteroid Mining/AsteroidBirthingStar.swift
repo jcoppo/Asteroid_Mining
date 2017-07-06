@@ -78,7 +78,7 @@ class AsteroidBirthingStar: Asteroid {
 
             let points = makePointsInCircle(centerPoint: CGPoint(x: 0, y: 0), radius: width/2, numberOfPoints: numPoints)
 
-            let offsetRange: CGFloat = 100
+            let offsetRange: CGFloat = 50
             
             let path = CGMutablePath()
             path.move(to: CGPoint(x: points[0].x + random(-offsetRange, offsetRange), y: points[0].y + random(-offsetRange, offsetRange)))
