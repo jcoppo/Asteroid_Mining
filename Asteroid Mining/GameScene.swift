@@ -162,8 +162,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         for element in asteroid.elements {
             let side = random(10, 30)
             let particle = SKShapeNode(rectOf: CGSize(width: side, height: side))
-            let x = asteroid.position.x + random(-asteroid.radius, asteroid.radius)
-            let y = asteroid.position.y + random(-asteroid.radius, asteroid.radius)
+            let x = asteroid.position.x + random(-asteroid.width, asteroid.width)
+            let y = asteroid.position.y + random(-asteroid.width, asteroid.width)
             particle.position = CGPoint(x: x, y: y)
             particle.fillColor = element.color
             particle.lineWidth = 0
@@ -391,11 +391,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         playerShip.removeCueLine()
-        
-        if gameMode == .InPlay{
-            playerShip.boost()
-        }
-        
+
         for t in touches {
             let location = t.location(in: self)
 
@@ -420,6 +416,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
             
             playerShip.physicsBody?.velocity.dx += -xSpeed
             playerShip.physicsBody?.velocity.dy += -ySpeed
+            
+            if gameMode == .InPlay {
+                playerShip.boost()
+            }
             
         }
         
@@ -494,9 +494,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         
         let maskA = contact.bodyA.categoryBitMask
         let maskB = contact.bodyB.categoryBitMask
-//        var bodyA = SKPhysicsBody()
-//        var bodyB = SKPhysicsBody()
-        
+
         if (maskA == BitMask.Player && maskB == BitMask.MotherShip) ||
             (maskA == BitMask.MotherShip && maskB == BitMask.Player) {
             
@@ -533,10 +531,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         //mined particles to follow ship
         for particle in minedParticles {
             let direction = pointDirection(point1: particle.position, point2: playerShip.position)
-            particle.position.x += 6*cos(direction)
-            particle.position.y += 6*sin(direction)
+            particle.position.x += 10*cos(direction)
+            particle.position.y += 10*sin(direction)
         }
-//        
+//
         for particle in dropOffParticles {
             if pointDistance(point1: particle.position, point2: motherShip.position) < 20 {
                 particle.removeFromParent()
