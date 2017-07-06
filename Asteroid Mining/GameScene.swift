@@ -494,9 +494,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         
         let maskA = contact.bodyA.categoryBitMask
         let maskB = contact.bodyB.categoryBitMask
-//        var bodyA = SKPhysicsBody()
-//        var bodyB = SKPhysicsBody()
-        
+
         if (maskA == BitMask.Player && maskB == BitMask.MotherShip) ||
             (maskA == BitMask.MotherShip && maskB == BitMask.Player) {
             
