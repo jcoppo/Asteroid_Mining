@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 import SpriteKit
-import CoreImage 
+import CoreImage
+
+struct Font {
+    static let arial = "Arial"
+}
 
 struct ViewControllers {
     static var gameVC = GameViewController()
@@ -122,10 +126,6 @@ public enum GradientDirection {
     case Left
     case UpLeft
     case UpRight
-}
-
-struct Font {
-    static let arial = "Arial"
 }
 
 func gradientTexture(size: CGSize, color1: CIColor, color2: CIColor, direction: GradientDirection) -> SKTexture {
