@@ -17,13 +17,13 @@ class ExitButton: SKNode {
         super.init()
         
         circle = SKShapeNode(circleOfRadius: radius)
-        circle.lineWidth = 5
+        circle.lineWidth = 4
         circle.strokeColor = UIColor(white: 0.9, alpha: 1.0)
 //        circle.fillColor = UIColor.gray
         addChild(circle)
         
         let theArrow = SKShapeNode(path: makePath(bounds: circle.frame))
-        theArrow.lineWidth = 5
+        theArrow.lineWidth = 4
         circle.addChild(theArrow)
         
         name = "exit"
@@ -36,9 +36,9 @@ class ExitButton: SKNode {
         print(bounds)
         let pathPath = CGMutablePath()
         
-        pathPath.move(to: CGPoint(x:-15, y: -15))
-        pathPath.addLine(to: CGPoint(x:20, y: 0))
-        pathPath.addLine(to: CGPoint(x:-15, y: 20))
+        pathPath.move(to: CGPoint(x:-10, y: -10))
+        pathPath.addLine(to: CGPoint(x:10, y: 0))
+        pathPath.addLine(to: CGPoint(x:-10, y: 10))
         
         return pathPath
     }
