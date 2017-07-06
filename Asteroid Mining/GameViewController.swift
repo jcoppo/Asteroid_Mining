@@ -87,7 +87,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let title = UILabel(frame: CGRect(x: 15, y: 10, width: cell.frame.width, height: 30))
         title.text = shopItem.name
-        title.font = UIFont(name: "Arial", size: 25)
+        title.font = UIFont(name: Font.font, size: 25)
         title.textColor = UIColor.white
         
         let pic = UIImageView(frame: CGRect(x: 15, y: 50, width: 60, height: 60))
@@ -102,7 +102,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let label = UILabel(frame: CGRect(x: 80, y: 50 + CGFloat(n)*20, width: cell.frame.width, height: 20))
             label.text = "\(cost.cost) \(cost.element.name)"
-            label.font = UIFont(name: "Arial", size: 15)
+            label.font = UIFont(name: Font.font, size: 15)
             label.textColor = cost.element.color
             cell.addSubview(label)
             

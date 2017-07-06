@@ -277,7 +277,7 @@
 				TargetAttributes = {
 					BC1253721EFB4CA000C21B8D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2A8STS47V2;
+						DevelopmentTeam = 3NSLQNHB3C;
 						ProvisioningStyle = Automatic;
 					};
 					BC12538C1EFB4CA000C21B8D = {
@@ -521,7 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2A8STS47V2;
+				DEVELOPMENT_TEAM = 3NSLQNHB3C;
 				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";
@@ -534,7 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2A8STS47V2;
+				DEVELOPMENT_TEAM = 3NSLQNHB3C;
 				INFOPLIST_FILE = "Asteroid Mining/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jaysoncoppo.Asteroid-Mining";

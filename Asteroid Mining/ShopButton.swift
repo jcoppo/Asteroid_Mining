@@ -13,7 +13,7 @@ class ShopButton: SKNode {
     var shape = SKShapeNode()
     var radius: CGFloat = 30
     
-    let label = SKLabelNode(fontNamed: "Arial")
+    let label = SKLabelNode(fontNamed: Font.font)
     
     var inShopMode = false
     

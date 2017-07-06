@@ -12,7 +12,7 @@ import SpriteKit
 import CoreImage
 
 struct Font {
-    static let arial = "Arial"
+    static let font = "Papyrus"
 }
 
 struct ViewControllers {

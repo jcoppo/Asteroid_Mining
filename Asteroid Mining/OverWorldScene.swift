@@ -13,7 +13,7 @@ class OverWorldScene: SKScene {
     
     let cameraNode = SKCameraNode()
     let playerIcon = SKSpriteNode(imageNamed: "Spaceship")
-    var areaLabel = SKLabelNode(fontNamed: "Arial")
+    var areaLabel = SKLabelNode(fontNamed: Font.font)
     let backgroundStars = BackgroundStars()
     let elements = Elements()
     var areaNodes = [AreaNode]()

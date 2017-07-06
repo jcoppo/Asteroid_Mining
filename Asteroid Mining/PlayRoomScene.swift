@@ -118,7 +118,7 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
             var numberOfLabels = 0
             
             //title label
-            let titleLabel = SKLabelNode(fontNamed: "Arial")
+            let titleLabel = SKLabelNode(fontNamed: Font.font)
             titleLabel.position = CGPoint(x: -size.width/2, y: size.height/2)
             titleLabel.horizontalAlignmentMode = .left
             titleLabel.fontSize = 40
@@ -132,7 +132,7 @@ class PlayRoomScene: SKScene, SKPhysicsContactDelegate {
                     
                     //show labels
                     numberOfLabels += 1
-                    let label = SKLabelNode(fontNamed: "Arial")
+                    let label = SKLabelNode(fontNamed: Font.font)
                     label.position = CGPoint(x: -size.width/2, y: size.height/2 - CGFloat(numberOfLabels)*40)
                     label.horizontalAlignmentMode = .left
                     label.text = "\(elementsGained.elements.elementArray[i].amount) \(elementsGained.elements.elementArray[i].name)"

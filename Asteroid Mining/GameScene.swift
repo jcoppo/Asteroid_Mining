@@ -144,7 +144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         
         for i in 0..<asteroid.elements.count {
             let element = asteroid.elements[i]
-            let label = SKLabelNode(fontNamed: "Arial")
+            let label = SKLabelNode(fontNamed: Font.font)
             label.position = CGPoint(x: 0, y: CGFloat(i)*40)
             label.text = "\(element.amount) \(element.name)"
             label.fontColor = element.color
@@ -221,7 +221,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
         dropOffParticles = [SKNode]()
         
         //title label
-        let titleLabel = SKLabelNode(fontNamed: "Arial")
+        let titleLabel = SKLabelNode(fontNamed: Font.font)
         titleLabel.position = CGPoint(x: -size.width/2, y: size.height/2-labels_yDown)
         titleLabel.horizontalAlignmentMode = .left
         titleLabel.fontSize = 40
@@ -268,7 +268,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, AsteroidDelegate {
                         if elementsGained.elements.elementArray[i].amount > 0 {
                             
                             //show labels
-                            let label = SKLabelNode(fontNamed: "Arial")
+                            let label = SKLabelNode(fontNamed: Font.font)
                             let x = -size.width/2
                             let y = size.height/2 - labels_yDown - CGFloat(numberOfLabels)*40
                             label.position = CGPoint(x: x, y: y)

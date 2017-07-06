@@ -117,7 +117,7 @@ class Asteroid: SKNode {
         
         for i in 0..<elements.count {
             let element = elements[i]
-            let label = SKLabelNode(fontNamed: "Arial")
+            let label = SKLabelNode(fontNamed: Font.font)
             label.position = CGPoint(x: 0, y: CGFloat(i)*50)
             label.text = "\(element.amount) \(element.name)"
             addChild(label)

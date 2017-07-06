@@ -25,7 +25,7 @@ class ShopButtonView: UIView {
         label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         label.text = "SHOP"
         label.textColor = UIColor.white
-        label.font = UIFont(name: Font.arial, size: 20)
+        label.font = UIFont(name: Font.font, size: 20)
         label.textAlignment = .center
         addSubview(label)
         
