@@ -19,7 +19,6 @@ class ExitButton: SKNode {
         circle = SKShapeNode(circleOfRadius: radius)
         circle.lineWidth = 4
         circle.strokeColor = UIColor(white: 0.9, alpha: 1.0)
-//        circle.fillColor = UIColor.gray
         addChild(circle)
         
         let theArrow = SKShapeNode(path: makePath(bounds: circle.frame))
